@@ -169,28 +169,29 @@ body {
     backdrop-filter: blur(20px);
     pointer-events: auto;
     opacity: 0.8;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .bg-nav-btn:hover {
     background: rgba(255, 68, 68, 0.2);
     border-color: rgba(255, 68, 68, 0.4);
-    transform: scale(1.1);
+    transform: translateY(-50%) scale(1.1);
     opacity: 1;
     box-shadow: 0 8px 32px rgba(255, 68, 68, 0.3);
 }
 
 .bg-nav-btn:active {
-    transform: scale(0.95);
+    transform: translateY(-50%) scale(0.95);
 }
 
 .bg-nav-left {
-    position: absolute;
-    left: 0;
+    left: 40px;
 }
 
 .bg-nav-right {
-    position: absolute;
-    right: 0;
+    right: 80px;
 }
 
 .logo h1 {
@@ -713,10 +714,6 @@ body {
         height: 14px;
     }
 
-    .bg-nav-buttons {
-        padding: 0 25px;
-    }
-
     .bg-nav-btn {
         width: 50px;
         height: 50px;
@@ -732,15 +729,11 @@ body {
     }
 
     .bg-nav-right {
-        right: 25px;
+        right: 60px;
     }
 }
 
 @media (max-width: 480px) {
-    .bg-nav-buttons {
-        padding: 0 15px;
-    }
-
     .bg-nav-btn {
         width: 45px;
         height: 45px;
@@ -757,7 +750,7 @@ body {
     }
 
     .bg-nav-right {
-        right: 15px;
+        right: 50px;
     }
 }
 
