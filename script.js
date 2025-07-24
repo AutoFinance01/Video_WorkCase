@@ -234,6 +234,58 @@ document.addEventListener('DOMContentLoaded', function() {
             if (target) {
                 target.scrollIntoView({behavior: 'smooth'});
             }
-        });
     });
+});
+
+// 视频模态框功能
+const videoModal = document.getElementById('videoModal');
+const modalVideo = document.getElementById('modalVideo');
+const videoCloseBtn = document.getElementById('videoCloseBtn');
+
+// 视频卡片点击事件
+document.querySelectorAll('.video-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const videoSrc = this.dataset.video;
+        if (videoSrc) {
+            // 设置视频源
+            modalVideo.src = videoSrc;
+            // 显示模态框
+            videoModal.classList.add('active');
+            // 暂停背景音乐
+            if (audio && !audio.paused) {
+                audio.pause();
+            }
+        }
+    });
+});
+
+// 关闭按钮点击事件
+videoCloseBtn.addEventListener('click', function() {
+    closeVideoModal();
+});
+
+// 点击模态框背景关闭
+videoModal.addEventListener('click', function(e) {
+    if (e.target === videoModal) {
+        closeVideoModal();
+    }
+});
+
+// ESC键关闭模态框
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+        closeVideoModal();
+    }
+});
+
+// 关闭视频模态框函数
+function closeVideoModal() {
+    videoModal.classList.remove('active');
+    modalVideo.pause();
+    modalVideo.src = '';
+    // 恢复背景音乐（如果之前在播放）
+    if (audio && audio.paused && !musicPaused) {
+        audio.play().catch(e => console.log('音频播放失败:', e));
+    }
+}
 });
