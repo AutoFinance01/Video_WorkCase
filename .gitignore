@@ -23,9 +23,9 @@ yarn-error.log*
 # videos/
 # music/
 # 保留小图片文件，排除过大的视频
-*.mp4
-*.avi
-*.mov
+# *.mp4
+# *.avi
+# *.mov
 # 保留音频文件用于网站功能
 # *.mp3
 # *.wav
