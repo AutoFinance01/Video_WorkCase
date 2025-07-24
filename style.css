@@ -518,72 +518,76 @@ body {
     font-size: 0.9rem;
 }
 
-/* 联系信息 - 现代简洁风格 */
+/* 联系信息 - 融合背景设计 */
 .contact {
-    margin-top: 4rem;
-    padding: 2rem 0;
+    margin-top: 3rem;
+    padding: 3rem 0;
 }
 
 .contact-card {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 2rem;
-    backdrop-filter: blur(20px);
-    transition: all 0.3s ease;
     text-align: center;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 68, 68, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    background: none;
+    border: none;
 }
 
 .contact-info {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1rem;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .contact-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
 }
 
 .contact-label {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    letter-spacing: 0.05em;
 }
 
 .contact-value {
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    font-weight: 600;
     font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.contact-value:hover {
+    color: rgba(255, 68, 68, 0.8);
 }
 
 .contact-divider {
     width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3), transparent);
+    height: 50px;
+    background: linear-gradient(to bottom, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        rgba(255, 68, 68, 0.3),
+        rgba(255, 255, 255, 0.2), 
+        transparent
+    );
 }
 
 .contact-subtitle {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
     margin: 0;
-    opacity: 0.8;
+    font-weight: 300;
+    letter-spacing: 0.02em;
 }
 
 /* 响应式调整 */
@@ -600,18 +604,27 @@ body {
     
     .contact-info {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2rem;
     }
     
     .contact-divider {
-        width: 60px;
+        width: 80px;
         height: 1px;
-        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+        background: linear-gradient(to right, 
+            transparent, 
+            rgba(255, 255, 255, 0.2), 
+            rgba(255, 68, 68, 0.3),
+            rgba(255, 255, 255, 0.2), 
+            transparent
+        );
     }
     
     .contact-card {
-        max-width: 320px;
-        padding: 1.5rem;
+        max-width: 300px;
+    }
+    
+    .contact-value {
+        font-size: 1.2rem;
     }
 }
 
