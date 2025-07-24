@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张以令作品集</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="music/sheluvme (Explicit) - Tai Verdes.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control -->
+    <div class="music-control">
+        <button id="musicToggle" class="music-btn">
+            <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+            </svg>
+            <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" style="display: none;">
+                <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Audio Visualization Canvas -->
+    <div class="visualization-container">
+        <canvas id="audioCanvas"></canvas>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <!-- 头像 -->
+                <div class="avatar-container">
+                    <img src="image/avatar.PNG" alt="张以令头像" class="avatar">
+                </div>
+                <!-- 标题 -->
+                <div class="logo">
+                    <h1>张以令<span class="accent">作品集</span></h1>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#portfolio" class="nav-link">作品</a>
+                <a href="#about" class="nav-link">关于</a>
+                <a href="#contact" class="nav-link">联系</a>
+            </nav>
+        </header>
+        
+        <!-- 背景图片切换按钮 - 左右分布 -->
+        <div class="bg-nav-buttons">
+            <button class="bg-nav-btn bg-nav-left" id="bgPrevBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="bg-nav-btn bg-nav-right" id="bgNextBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- 标题部分 -->
+            <section class="hero" id="hero">
+                <h2 class="hero-title">视觉创作</h2>
+                <p class="hero-subtitle">探索光影与色彩的艺术之旅</p>
+            </section>
+            
+            <!-- Video Grid -->
+            <section class="portfolio" id="portfolio">
+                <h2 class="section-title">视频作品</h2>
+                <div class="portfolio-grid">
+                    <div class="video-card featured" data-category="commercial" data-video="videos/commercial/速威克匹克球拍.mp4.mp4">
+                        <div class="video-thumbnail">
+                            <video class="video-preview" muted preload="none">
+                                <source src="videos/commercial/速威克匹克球拍.mp4.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-placeholder">
+                                <div class="play-button">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-overlay">
+                                <div class="video-info">
+                                    <span class="video-category">广告展示</span>
+                                    <h3 class="video-title">速威克匹克球拍</h3>
+                                    <p class="video-description">专业运动器材产品展示视频</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-category="music" data-video="videos/music/《珠玉》MV.mp4">
+                        <div class="video-thumbnail">
+                            <video class="video-preview" muted preload="none">
+                                <source src="videos/music/《珠玉》MV.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-placeholder">
+                                <div class="play-button">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-overlay">
+                                <div class="video-info">
+                                    <span class="video-category">音乐视频</span>
+                                    <h3 class="video-title">《珠玉》MV</h3>
+                                    <p class="video-description">原创音乐视频作品</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-category="creative" data-video="videos/commercial/cowboy4.mp4">
+                        <div class="video-thumbnail">
+                            <video class="video-preview" muted preload="none">
+                                <source src="videos/commercial/cowboy4.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-placeholder">
+                                <div class="play-button">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-overlay">
+                                <div class="video-info">
+                                    <span class="video-category">调色展示</span>
+                                    <h3 class="video-title">Cowboy </h3>
+                                    <p class="video-description">Davinci调色效果展示</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 过往作品图片展示 -->
+            <section class="past-works" id="past-works">
+                <h2 class="section-title">过往作品</h2>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="image/Timeline 2_01_02_55_22.jpg" alt="作品图片1" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="image-info">
+                                <h3>视觉艺术</h3>
+                                <p>2024年创作作品</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Timeline 2_01_03_00_09.jpg" alt="作品图片2" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="image-info">
+                                <h3>光影构图</h3>
+                                <p>2024年创作作品</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Timeline 2_01_04_05_07.jpg" alt="作品图片3" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="image-info">
+                                <h3>色彩表达</h3>
+                                <p>2024年创作作品</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Timeline 2_01_13_07_15.jpg" alt="作品图片4" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="image-info">
+                                <h3>人文纪实</h3>
+                                <p>2024年创作作品</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Timeline 2_01_42_16_18.jpg" alt="作品图片5" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="image-info">
+                                <h3>创意设计</h3>
+                                <p>2024年创作作品</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Timeline 2_01_37_58_07.jpg" alt="作品图片6" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="image-info">
+                                <h3>建筑美学</h3>
+                                <p>2024年创作作品</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Timeline 2_01_01_35_02.jpg" alt="作品图片7" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="image-info">
+                                <h3>自然风光</h3>
+                                <p>2024年创作作品</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Timeline 2_01_00_46_21.jpg" alt="作品图片8" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="image-info">
+                                <h3>艺术表现</h3>
+                                <p>2024年创作作品</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 张以令. 保留所有权利</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="audio-visualizer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
