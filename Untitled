@@ -1,0 +1,8 @@
+# 安装 Homebrew（Mac 必备包管理器）
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 然后用 Homebrew 重新安装 Node.js
+brew install node
+
+# 最后安装 CloudBase CLI
+brew install --cask tencent-cloudbase-cli

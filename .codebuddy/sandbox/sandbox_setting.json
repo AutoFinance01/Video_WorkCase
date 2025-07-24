@@ -1,0 +1,20 @@
+{
+  "path": "/Users/zhangyilin/CodeBuddy/20250724t003442/music-visualization/deploy-light",
+  "desc": "张以令的音乐可视化作品集网站轻量版，包含图片画廊、音频可视化效果等功能，展示视觉创作作品。不包含大型视频文件以避免上传限制。",
+  "id": "ef5f7893e5a14b6ab83787cc189ceb88",
+  "data": {
+    "spaceKey": "ef5f7893e5a14b6ab83787cc189ceb88",
+    "connections": {
+      "webIDE": "https://ef5f7893e5a14b6ab83787cc189ceb88.ap-singapore.cloudstudio.club",
+      "preview": "https://ef5f7893e5a14b6ab83787cc189ceb88--{port}.ap-singapore.cloudstudio.club",
+      "api": "https://ef5f7893e5a14b6ab83787cc189ceb88--api.ap-singapore.cloudstudio.club",
+      "pty": "https://ef5f7893e5a14b6ab83787cc189ceb88--pty.ap-singapore.cloudstudio.club"
+    }
+  },
+  "config": {
+    "api": "https://ef5f7893e5a14b6ab83787cc189ceb88--api.ap-singapore.cloudstudio.club",
+    "pty": "https://ef5f7893e5a14b6ab83787cc189ceb88--pty.ap-singapore.cloudstudio.club",
+    "region": "ap-shanghai",
+    "spaceKey": "ef5f7893e5a14b6ab83787cc189ceb88"
+  }
+}
