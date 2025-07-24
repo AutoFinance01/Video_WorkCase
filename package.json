@@ -1,0 +1,14 @@
+{
+  "name": "zhang-yiling-portfolio",
+  "version": "1.0.0",
+  "description": "张以令视觉创作作品集",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python3 -m http.server 8000"
+  },
+  "keywords": ["portfolio", "video", "visual", "art"],
+  "author": "张以令",
+  "license": "MIT"
+}
